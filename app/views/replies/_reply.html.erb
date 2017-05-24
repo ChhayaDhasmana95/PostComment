@@ -1,0 +1,15 @@
+<% @post.comments.replies.each do |reply| %>
+      <p>
+        <strong>Reply:</strong>
+          <%= reply.title %>
+      </p>
+ 
+      <p>
+        <strong>Reply:</strong>
+          <%= reply.body %>
+      </p>
+      <p>
+      <%= link_to 'Destroy Reply', [reply.comment, reply],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+      </p>
